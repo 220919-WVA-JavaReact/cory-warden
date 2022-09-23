@@ -12,7 +12,7 @@ isVar=^[-+]?[0-9]+$
 ## isNegativeVar=^-[0-9]+$
 if ! [[ $num1 =~ $isVar ]] || ! [[ $num2 =~ $isVar ]]
   then echo "sorry, one of these is not an integer";
-  exit 0;
+exit 0;
 fi
 	
 #Type of expression
