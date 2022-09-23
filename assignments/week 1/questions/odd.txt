@@ -1,0 +1,6 @@
+
+-345 is negative
+-56 is negative
+-456 is negative
+-123 is negative
++-------------------------------------------+
