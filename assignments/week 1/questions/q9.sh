@@ -11,10 +11,10 @@ if [[ $num =~ $isVar ]]
 then
   if [[ `expr $((num % 2))` == 0 ]]
     then
-      echo "$num is even.";
+    echo "$num is even.";
     else
-      echo "$num is odd.";
-    fi
+    echo "$num is odd.";
+  fi
 else
   echo "This is not a valid number."
 fi
