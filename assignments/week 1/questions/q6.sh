@@ -8,17 +8,17 @@ read num
 isVar=^[-+]?[0-9]?[0-9]?$
 if [[ $num =~ $isVar ]] && [[ $num -gt 1 ]]
 then
-  for ((i=2;i<=$num/2; i++))
+  for ((i=2;i<=$num/2; i++))                 #loop to check through all possible numbers for a r0 outcome.
   do
     resp=$((num%i))
-    if [[ $resp -eq 0 ]]
+    if [[ $resp -eq 0 ]]                     #if outcome of r0 then echo below statement that numb is composite.
     then
       echo "$num is a composite number.";
-      exit 0;
+      exit 0;                                #break the remainder of code
     fi
   done
-  echo "$num is a prime number.";
+  echo "$num is a prime number.";            # if not equal to 0, then advise number is prime.
 else
-  echo "This is not a number over 2."
+  echo "Error: This is not a number over 1."        # if init entry was not a number greater than 1, send error.
 fi
 
