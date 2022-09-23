@@ -10,5 +10,5 @@ echo "Today is: ";
 echo `date +'%m/%d/%y %I:%M'`;
 echo "--------------------"
 echo "Number of users logged in: "
-who #should echo back users?
+echo "who ----should work in unix?" #should echo back users?
 echo "--------------------"
