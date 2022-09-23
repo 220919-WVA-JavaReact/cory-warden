@@ -5,7 +5,7 @@ echo "Input a number to see if it is prime or composite: "
 read num
 
 #check if it's a true integer
-isVar=^[-+]?[0-9]?[0-9]?$
+isVar=^[-+]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$
 if [[ $num =~ $isVar ]] && [[ $num -gt 1 ]]
 then
   for ((i=2;i<=$num/2; i++))                 #loop to check through all possible numbers for a r0 outcome.

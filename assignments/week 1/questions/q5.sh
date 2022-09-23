@@ -15,15 +15,15 @@ read num
 #  $i++
 #done
 
-isVar=^[-+]?[0-9]?$
+isVar=^[-+]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$
 if [[ $num =~ $isVar ]]
 then
   if [[ $num -gt 0 ]]
   then
-    echo "The number is positive."
+    echo "The number $num is positive."
   elif [[ $num -lt 0 ]]
   then
-    echo "The number is negative"
+    echo "The number $num is negative"
   else
     echo "The number is zero."
   fi

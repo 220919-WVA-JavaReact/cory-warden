@@ -8,7 +8,7 @@ read -p "Please provide your first number:" num1;
 read -p "Please provide your second number:" num2;
 	
 # break sys if number is not an integer
-isVar=^[-+]?[0-9]+$
+isVar=^[-+]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$
 ## isNegativeVar=^-[0-9]+$
 if ! [[ $num1 =~ $isVar ]] || ! [[ $num2 =~ $isVar ]]
   then echo "sorry, one of these is not an integer";
