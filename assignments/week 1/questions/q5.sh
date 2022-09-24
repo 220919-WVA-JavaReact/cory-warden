@@ -1,40 +1,30 @@
 #!/bin/bash
-again="y"
+
 echo "Positive or Negative?"
+arr=()
 
-echo "Input a number and see if they are positive or negative?"
-read num
-#echo "ex. 10 5 -5 3 -2 9 7 -7 9 10"
-#read a b c d e f g h i j
-#inputs=($a $b $c $d $e $f $g $h $i $j);
-#echo $inputs;
-#i=0
-#while [[ $inputs[$i] -gt 0 ]]
-#do
-#  echo $inputs[$i]
-#  $i++
-#done
+echo "Please input ten numbers to check for positive or negative with only a space between"
+echo "i.e. 5 4 123 -56 -7 4 2 67 -12"
+read a b c d e f g h i j;
 
+arr+="$a $b $c $d $e $f $g $h $i $j"
 isVar=^[-+]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$
-if [[ $num =~ $isVar ]]
-then
-  if [[ $num -gt 0 ]]
-  then
-    echo "The number $num is positive."
-  elif [[ $num -lt 0 ]]
-  then
-    echo "The number $num is negative"
-  else
-    echo "The number is zero."
-  fi
-else
-  echo "This is not a number."
-fi
+#echo $arr;
 
-read -p "Would you like to go again? (y/n): " again;
-if [[ $again = "y" ]]
-then
- bash ./q5.sh;
-else
- echo "Closing app."
-fi
+for cur in ${arr[@]}
+do
+ if [[ $cur =~ $isVar ]]
+ then
+  if [[ $cur -gt 0 ]]
+   then
+   echo "$cur is positive";
+  elif [[ $cur -lt 0 ]]
+   then
+   echo "$cur is negative";
+  else
+   echo "Your number is zero"
+  fi
+ else
+  echo "$cur was not a number."
+ fi
+done
