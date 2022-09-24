@@ -7,8 +7,7 @@ echo "Please input ten numbers to check for positive or negative with only a spa
 echo "i.e. 5 4 123 -56 -7 4 2 67 -12"
 read a b c d e f g h i j;
 
-#declaring variable for integers, and adding to array
-isVar=^[-+]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$
+#concatting to array
 arr+="$a $b $c $d $e $f $g $h $i $j"
 #echo $arr;
 
