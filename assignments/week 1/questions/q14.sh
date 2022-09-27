@@ -1,4 +1,3 @@
-  GNU nano 6.4                                             q8.sh
 #!/bin/bash
 
 echo "Palindrome Test"
