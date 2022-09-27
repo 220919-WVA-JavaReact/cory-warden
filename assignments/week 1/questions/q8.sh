@@ -17,7 +17,7 @@ length=${#str}
 for (( i=$length-1; i>=0; i-- ))
 do
   reversedstr="$reversedstr${str:$i:1}"; #extract each character from the string in reverse
-# echo "$reversedstr";
+ echo "$reversedstr";
 done
 if [[ $str = $reversedstr ]]             #check if original str is equal to extracted reverse
 then
