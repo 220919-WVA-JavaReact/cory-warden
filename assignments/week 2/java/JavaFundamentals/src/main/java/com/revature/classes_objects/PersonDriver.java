@@ -1,4 +1,4 @@
-package com.revature.ClassesObjects;
+package com.revature.classes_objects;
 
 public class PersonDriver {
 

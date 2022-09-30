@@ -1,4 +1,4 @@
-package com.revature.ClassesObjects;
+package com.revature.classes_objects;
 
 /*
 First uncommented line of the files should be the package name
