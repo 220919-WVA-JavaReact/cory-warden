@@ -8,8 +8,8 @@ public class SimpleCalculator {
         //store two numbers with decimal potential and operator sign for user to input as well as initialize scanner
         String restart = "yes";
         Scanner input = new Scanner(System.in);
-        float num1;
-        float num2;
+        int num1;
+        int num2;
         char oper;
 
         while (restart == "yes") {
@@ -17,13 +17,13 @@ public class SimpleCalculator {
             System.out.println("Simple Calculator");
             System.out.println("---------------------------------------------");
             System.out.println("Please enter the first number you would like to add");
-            num1 = input.nextFloat();
+            num1 = input.nextInt();
 
             System.out.println("Please enter the operator you would like to use (+ - / *)");
             oper = input.next().charAt(0);
 
             System.out.println("Please enter the second number you would like to add");
-            num2 = input.nextFloat();
+            num2 = input.nextInt();
 
             //create result variable, start switch case based upon operator choice
             float res = 0;
@@ -56,11 +56,11 @@ public class SimpleCalculator {
             }
             System.out.println("Your answer is: " + String.format("%.2f", res));
             System.out.println("---------------------------------------------");
-            String resp = "";
-            System.out.println("If you would like to quit, press 'q'");
-            resp = input.nextLine();
 
-            if (resp == "yes") {
+            System.out.println("If you would like to quit, press 'q'");
+            String resp = input.nextLine();
+
+            if (resp != "yes") {
                 break;
             }
 
