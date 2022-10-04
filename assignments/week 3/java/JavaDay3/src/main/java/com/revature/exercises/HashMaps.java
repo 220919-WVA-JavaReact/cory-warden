@@ -43,5 +43,8 @@ public class HashMaps {
             System.out.println("Key is: " + pair.getKey() + ", Value is: " + pair.getValue());
         }
         System.out.println("+---------------------------------------+");
+
+        System.out.println(menu.keySet()); //Not sure if you wanted just keys or keys and values?
+        System.out.println("+---------------------------------------+");
     }
 }
