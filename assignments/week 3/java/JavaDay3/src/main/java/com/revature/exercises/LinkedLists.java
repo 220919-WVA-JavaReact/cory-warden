@@ -7,7 +7,7 @@ public class LinkedLists {
     Below is a list of exercises to help you get familiar with working with the ArrayList Collection
      */
     public static void main(String[] args) {
-        List<String> foods = new LinkedList<String>();
+        LinkedList<String> foods = new LinkedList<String>();
         // 1. Write a Java program to append the specified element to the end of a linked list. Add several values.
         String str1 = "steak", str2 = "hamburger", str3 = "hotdog", str4 = "fries";
         foods.add(str1);
@@ -23,7 +23,7 @@ public class LinkedLists {
         }
         System.out.println("+---------------------------------------+");
         // 3. Write a Java program to iterate a linked list in reverse order
-        Iterator<String> rev = ((LinkedList<String>) foods).descendingIterator();
+        Iterator<String> rev = foods.descendingIterator();
         while(rev.hasNext()) {
             System.out.println(rev.next());
         }
@@ -40,8 +40,8 @@ public class LinkedLists {
         System.out.println("+---------------------------------------+");
 
         // 6. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
-        String first = ((LinkedList<String>) foods).getFirst();
-        String last = ((LinkedList<String>) foods).getLast();
+        String first = foods.getFirst();
+        String last = foods.getLast();
         System.out.println("First ele = " + first);
         System.out.println("Last ele = " + last);
         System.out.println("+---------------------------------------+");
