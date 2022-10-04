@@ -40,7 +40,7 @@ public class HashMaps {
 
         // 5. Write a Java program to get a set view of the keys contained in this map.
         for (Map.Entry<Integer, String> pair : menu.entrySet()) {
-            System.out.println(String.format("Key is: " + pair.getKey() + ", Value is: " + pair.getValue()));
+            System.out.println("Key is: " + pair.getKey() + ", Value is: " + pair.getValue());
         }
         System.out.println("+---------------------------------------+");
     }
