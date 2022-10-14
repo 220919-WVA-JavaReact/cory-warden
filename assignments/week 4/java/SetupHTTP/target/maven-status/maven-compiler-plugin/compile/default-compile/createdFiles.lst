@@ -1,2 +1,7 @@
+com\revature\servlets\UserServlet.class
+com\revature\servlets\SanityServlet.class
+com\revature\models\AppUser.class
+com\revature\models\Flashcard.class
+com\revature\util\ContextLoaderListener.class
 com\revature\Main.class
-com\revature\SanityServlet.class
+com\revature\servlets\FlashcardServlet.class

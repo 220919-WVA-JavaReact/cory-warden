@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Inside here is where spring beans are configured. (any class I want Spring to manage instances of -->
+
+    <!-- Provide the bean definition for the MotivationalService and WorkoutService -->
+    <bean id="motivationalServiceBean" class="com.revature.services.MotivationalService"/>
+    <bean id="workoutServiceBean" class="com.revature.services.WorkoutService"/>
+
+    <!-- Let's create a definition for a track coach that's called MyCoach -->
+    <!-- changing scope in beans.xml to "prototype" will make them different coaches. -->
+    <bean id="myTrackCoach" class="com.revature.models.TrackCoach" scope="prototype">
+        <constructor-arg ref="workoutServiceBean"/>
+        <constructor-arg ref="motivationalServiceBean"/>
+    </bean>
+
+    <!-- How to do setter injection with our football coach -->
+    <bean id="MyFootballCoach" class="com.revature.models.FootballCoach">
+        <!-- To specify fields, we need to set them with property tag-->
+        <property name="workoutService" ref="workoutServiceBean"/>
+        <property name="motivationalService" ref="motivationalServiceBean"/>
+        <property name="teamName" value="Pittsburgh Steelers"/>
+        <property name="email" value= "${coach-email}"/>
+    </bean>
+
+    <!-- how to link properties file to xml -->
+    <context:property-placeholder location="application.properties"/>
+
+
+
+
+</beans>

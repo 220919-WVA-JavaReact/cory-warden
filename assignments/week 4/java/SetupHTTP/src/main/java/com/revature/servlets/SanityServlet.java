@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +10,13 @@ import java.time.LocalDateTime;
 
 //Whenever we want to create a servlet, need to extend HttpServlet abstract class to handle the methods
 public class SanityServlet extends HttpServlet {
+
+    @Override
+    public void init() throws ServletException {
+        System.out.println("[LOG] - Server Instantiated");
+        System.out.println("[LOG] - Init param test-init-key: " + this.getServletConfig().getInitParameter("test-init-key"));
+        System.out.println("[LOG] - Context param test-context-key: " + this.getServletContext().getInitParameter("test-context-key"));
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
