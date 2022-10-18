@@ -1,5 +1,6 @@
 body {
 min-height: 98vh;
+background-color: #eefcff;
 }
 
 li {
@@ -47,6 +48,7 @@ width: 20%;
 padding: 10px;
 margin: 10px;
 text-align: center;
+background-color: white;
 }
 .social {
 border: 1px solid black;
@@ -54,6 +56,7 @@ width: 50%;
 height: 80%;
 text-align: center;
 padding: 10px;
+background-color: white;
 }
 
 .sociallink {
