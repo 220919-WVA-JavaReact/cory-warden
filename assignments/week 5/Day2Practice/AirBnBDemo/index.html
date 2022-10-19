@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnB App</title>
+</head>
+<body>
+    <!-- Two major parts, top form for user input and body for items in model cards to load/respond -->
+    <div>
+        <h2>Search AirBnB for Places</h2>
+        <input type="text" placeholder="Destination" id="destination"/>
+        <input type="date" id="check-in"/>
+        <input type="date" id="check-out"/>
+        <input type="number" placeholder="Number of Guests" id="guests" min="1" max="8"/>
+
+        <button id="search-button">Search</button>
+    </div>
+    <div id="room-container">
+
+
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
