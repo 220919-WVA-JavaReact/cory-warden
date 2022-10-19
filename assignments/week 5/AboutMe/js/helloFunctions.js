@@ -1,4 +1,3 @@
-'use strict';
 console.log("Hello Functions");
 
 if ('0' ? console.log('truthy') : console.log('falsy'));
@@ -80,3 +79,33 @@ let defaultParams = (a, b=1) => {
 }
 console.log(defaultParams(3, 2));
 console.log(defaultParams(5));
+
+const Book = function(t, a) {
+    let title = t; 
+    let author = a; 
+    
+    return {
+       summary : function() { 
+         console.log(`${title} written by ${author}.`);
+       } 
+    }
+ }
+ const book1 = new Book('Hippie', 'Paulo Coelho');
+ book1.summary(); // Returns Hippie written by Paulo Coelho.
+
+ let animal = {
+    eats: true,
+  walk() {
+    console.log("Animal walk");
+    }
+  };
+  let rabbit = {
+    jumps: true,
+    __proto__: animal	// sets animal to be a prototype of rabbit.
+  };
+  
+  // we can find both properties in rabbit now:
+  console.log( rabbit.eats ); // true 
+  console.log( rabbit.jumps ); // true
+  // walk is taken from the prototype
+  rabbit.walk(); // Animal walk
