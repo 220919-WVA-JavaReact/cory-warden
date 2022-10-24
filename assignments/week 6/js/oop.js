@@ -24,10 +24,17 @@ window.onload = () => {
     console.log('-----------------------');
     console.log(cus3.getType());
     console.log('-----------------------');
-    namedFunc();
-    someObject.someObject_namedFunction();
-    someObject.someObject_anonFunction();
-    someObject.someObject_arrowFunction();
+    // namedFunc();
+    // someObject.someObject_namedFunction();
+    // someObject.someObject_anonFunction();
+    // someObject.someObject_arrowFunction();
+    let map = new PoorMansMap();
+    map.put('Kevin', 'password');
+    map.put('Victoria', 'password');
+    console.log(map.get('Kevin'));
+    map.put('Kevin', 'pass');
+    console.log(map.get('Kevin'));
+    map.getKeyIfExists('Kevin');
 }
 
 let objectLiteral = {
@@ -122,6 +129,56 @@ let someObject = {
     }
 }
 
+/*
+Create a custom Map
+    Maps have Key/Value pairs
+    put(k,v);
+        if k/v exists already, override v.
+    get(k,v);
+        retrieve value associated with key
+*/
+function PoorMansMap() {
+    let arr = [];
+
+    function getKeyIfExists(key) {
+        //check if key exists
+        for (let i=0; i<arr.length; i+=2) {
+            //checking if key is equal to value in array
+            if (key === arr[i]) {
+                //retrieve it
+                return i;
+            }
+        }
+        return -1; //says that key does not exist if no key found
+    }
+
+    function get(k) {
+        let index = getKeyIfExists(k);
+        //iterate through array by two at the key area
+        if (index === -1) {
+            return;
+        } else {
+            return arr[index + 1];
+        }
+    }
+
+    function put(k,v) {
+        let index = getKeyIfExists(k);
+        //iterate through array by two at the key area
+        if (index === -1) {
+            arr.push(k);
+            arr.push(v);
+        } else {
+            arr[index + 1] = v;
+        }
+    }
+
+    //Encapsulation. Ablity to create a closure and access functions inside of a function on the global(window) level.
+    return {
+        get: get,
+        put: put
+    }
+}
 
 
 
