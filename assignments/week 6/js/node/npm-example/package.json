@@ -1,0 +1,19 @@
+{
+  "name": "npm-example",
+  "version": "1.0.0",
+  "description": "example npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -t es5 index.ts && node index.js"
+  },
+  "keywords": [
+    "npm",
+    "project"
+  ],
+  "author": "Cory Warden",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
