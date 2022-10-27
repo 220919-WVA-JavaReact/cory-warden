@@ -1,0 +1,14 @@
+.body-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    }
+    
+.modules {
+    border: 1px solid black;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    }

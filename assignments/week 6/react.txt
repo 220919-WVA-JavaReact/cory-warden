@@ -1,0 +1,27 @@
+REACT
+    - JS Library to make creative UI
+        - lightweight 
+            - meant to be used with other modules of the user's choice(ie. React Router)
+        - React DOM, React Native, React VR
+    - Declarative
+        - Using React, we describe the desired state using JSX
+            - React handles the rest
+    - Library, NOT a framework.
+        - Frameworks (like VUE or Angular) have their "right way" of doing things.
+            - "forced" to do things the way they want
+            - "forced" to use their dependencies
+            - Frameworks generally "call your code" (IoC)
+    - Component based architecture
+        - breaking down a UI into small chunks of code that are reusable
+            - inject/remove views and functionality of the same page rather than requesting a new one.
+        - Single Page Application (SPA)
+            - Design Pattern
+            - no longer need to fully reload the web page with another view (only need one view)
+            - web pack
+                - static module bundler for modern JS applications
+    - Virtual DOM
+        - used to render elements more efficiently than tradition DOM Manipulation
+        - keeps virtual views in emmory
+            - updates/changes made are compatred to the virtual dom representation in memory
+            - the differential is calculated - Reconciliation
+            - only the necessary changes are made to the DOM
