@@ -1,4 +1,20 @@
-import './contact.component.css'
+import Socials from '../socials/socials';
+import './contact.component.css';
+
+const profiles = [
+    {
+    hrefname: "https://www.linkedin.com/in/iamcorywarden/",
+    itemname: 'LinkedOut'
+    },
+    {
+    hrefname: "https://github.com/12cwarden",
+    itemname: 'Github'
+    },
+    {
+    hrefname: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    itemname: 'Myspace'
+    }
+]
 
 const Contact = () => {
     return(
@@ -9,19 +25,10 @@ const Contact = () => {
         <div className="social">
             <h4>Find me below!</h4>
             <hr></hr>
-            <ul>
-                <li className="sociallink">
-                    <a href="https://www.linkedin.com/in/iamcorywarden/" target="_blank" rel="noreferrer">LinkedIn</a>
-                </li>
-                <br></br>
-                <li className="sociallink">
-                    <a href="https://github.com/12cwarden" target="_blank" rel="noreferrer">Github</a>
-                </li>
-                <br></br>
-                <li className="sociallink">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Myspace</a>
-                </li>
-            </ul>
+            {
+            profiles.map( profile => (
+                <Socials hrefname={profile.hrefname} itemname={profile.itemname} />
+            ))}
         </div>
     </div>
     )
